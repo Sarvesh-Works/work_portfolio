@@ -22,15 +22,6 @@ export const personalData = {
 
 export const experienceData = [
   {
-    title: "Flutter Developer",
-    company: "AAPLI SOCIETY (Freelance)",
-    location: "Remote",
-    date: "May 2025 – Present",
-    description:
-      "Developed an app for society management with Flutter, Firebase, and Node.js. Implemented features like notice board, complaint registration, and member management. Ensured smooth UI/UX and real-time data handling for better user experience.",
-    technologies: ["Flutter", "Firebase", "Node.js", "MongoDB"],
-  },
-  {
     title: "Flutter Trainer",
     company: "K.C. COLLEGE OF ENGINEERING",
     location: "Thane, India",
@@ -151,20 +142,20 @@ export const skillsData = [
 
 export const projectsData = [
   {
-    title: "TECH TRIMS (Startup Idea)",
+    title: "SALON_MANAGEMENT_APP",
     description:
-      "Conceptualized an innovative salon and spa service booking platform to allow customers to hire barbers for home services. Developed a functional prototype using Flutter and Dart, with Firebase Authentication and MongoDB backend for user data management. Implemented secure RESTful APIs protected by OAuth 2.0 with rate limiting, effectively blocking 500+ malicious requests.",
+      "Salon management and booking platform enabling customers to discover services, book appointments, select preferred stylists, and pay securely. Built with a focus on scalability, security, and smooth UX for both customers and staff.",
     image: {
-      src: "/tech-trims.png",
+      src: "/salon.png",
       width: 800,
       height: 600,
     },
     tags: [
       "Flutter",
       "Dart",
-      "Firebase",
+      "Firebase (Auth, Firestore, Cloud Functions)",
+      "Stripe/Razorpay",
       "MongoDB",
-      "OAuth 2.0",
       "RESTful APIs",
     ],
     link: "#",
@@ -172,11 +163,11 @@ export const projectsData = [
     date: "January 2025 - Present",
   },
   {
-    title: "AAPLI SOCIETY",
+    title: "SOCIETY_MANAGEMENT_APP",
     description:
-      "Society management application built with Flutter, Firebase, and Node.js. Features include notice board for announcements, complaint registration system, and comprehensive member management. Designed with smooth UI/UX and real-time data handling for seamless user experience.",
+      "Society management application built with Flutter, Firebase, and Node.js. Features include managing aspects, designed with smooth UI/UX and real-time data handling for seamless user experience.",
     image: {
-      src: "/aapli_society.png",
+      src: "/society.png",
       width: 800,
       height: 600,
     },
