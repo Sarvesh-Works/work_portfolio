@@ -21,16 +21,17 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Handle scroll event to change navbar appearance
+  // Disable background scroll when menu open
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "auto";
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth scroll implementation
   const scrollToSection = (e, sectionId) => {
     e.preventDefault();
     const section = document.querySelector(sectionId);
@@ -43,10 +44,8 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-background/80 backdrop-blur-sm border-b shadow-sm"
-          : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
+        "bg-background/80 backdrop-blur-sm border-b shadow-sm"
       )}
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -72,13 +71,13 @@ export function Navbar() {
           ))}
         </nav>
 
-        {/* Mobile Navigation Toggle */}
+        {/* Mobile Toggle */}
         <div className="flex items-center md:hidden">
           <Button
             variant="ghost"
             size="icon"
             aria-label="Toggle menu"
-            className="ml-2"
+            className="ml-2 z-[60]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -90,23 +89,48 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-background/95 backdrop-blur-sm pt-16 md:hidden">
-          <nav className="container mx-auto px-4 py-8 flex flex-col items-center space-y-6">
+        <>
+          {/* Clickable dark overlay */}
+          <div
+            style={{
+              position: "fixed",
+              inset: 0,
+              zIndex: 49,
+            }}
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+
+          {/* Menu container */}
+          <div
+            style={{
+              width: "100%",
+              backgroundColor: "rgb(2 6 24 / 71%);",
+              padding: "4rem 1rem",
+              display: "flex",
+              color: "#111",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "1.5rem",
+              boxShadow: "-5px 0 15px rgba(0,0,0,0.5)",
+              borderLeft: "1px solid rgba(255,255,255,0.1)",
+            }}
+          >
             {navItems.map((item) => (
               <Button
                 key={item.name}
                 variant="ghost"
                 size="lg"
-                className="text-xl"
+                className="text-xl text-white"
                 onClick={(e) => scrollToSection(e, item.href)}
               >
                 {item.name}
               </Button>
             ))}
-          </nav>
-        </div>
+          </div>
+        </>
       )}
     </header>
   );

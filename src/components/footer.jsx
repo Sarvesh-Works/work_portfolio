@@ -161,26 +161,9 @@ export function Footer() {
               </li>
               <li className="text-white/60">{personalData.location}</li>
             </ul>
-          </motion.div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-white/50 text-sm text-center sm:text-left"
-            >
-              © {currentYear} {personalData.name}. Made with{" "}
-              <Heart className="inline h-4 w-4 text-red-500 fill-current animate-pulse" />{" "}
-              using Next.js
-            </motion.p>
-
             <motion.button
               onClick={scrollToTop}
+              style={{ position: "absolute", right: 14 }}
               className="p-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-purple-500/50 transition-all"
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -188,7 +171,12 @@ export function Footer() {
             >
               <ChevronUp className="h-5 w-5" />
             </motion.button>
-          </div>
+          </motion.div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/10">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4"></div>
         </div>
       </div>
     </footer>

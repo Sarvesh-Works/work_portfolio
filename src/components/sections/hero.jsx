@@ -245,7 +245,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="order-1 lg:order-2 flex justify-center lg:justify-end"
           >
-            <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg aspect-square">
+            <div className="relative w-[250px] sm:w-[300px] md:w-[380px] lg:w-[450px] aspect-square mx-auto">
               {/* Glowing Background */}
               <motion.div
                 className="absolute inset-0 bg-gradient-to-br from-indigo-600/30 via-purple-600/30 to-blue-600/30 rounded-full blur-3xl"
@@ -263,10 +263,8 @@ export function Hero() {
               {/* Main Image Container */}
               <div className="relative z-10 w-full h-full p-4">
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 clip-blob"
-                  animate={{
-                    rotate: [0, 360],
-                  }}
+                  className="absolute inset-0 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 rounded-[50%]"
+                  animate={{ rotate: [0, 360] }}
                   transition={{
                     duration: 20,
                     repeat: Infinity,
@@ -275,7 +273,7 @@ export function Hero() {
                 />
 
                 {/* Replace the SVG section with actual image */}
-                <div className="absolute inset-6 bg-gradient-to-br from-slate-900 to-indigo-950 clip-blob overflow-hidden">
+                <div className="absolute inset-[8%] bg-gradient-to-br from-slate-900 to-indigo-950 rounded-[50%] overflow-hidden">
                   <Image
                     src="/profile.jpg"
                     alt={personalData.name}
