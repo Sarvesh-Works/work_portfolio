@@ -194,7 +194,7 @@ export function Hero() {
                   className="w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-0 shadow-lg shadow-indigo-500/30 transition-all hover:scale-105"
                   onClick={() => {
                     window.location.href =
-                      "mailto:sarveshsawant03@gmail.com?subject=Let's Connect&body=Hi Sarvesh,";
+                      "mailto:worksbysarvesh@gmail.com?subject=Let's Connect&body=Hi Sarvesh,";
                   }}
                 >
                   <Mail className="mr-2 h-5 w-5" />
