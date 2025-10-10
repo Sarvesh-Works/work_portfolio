@@ -14,7 +14,7 @@ export const personalData = {
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/sarvesh-sawant",
+      url: "https://www.linkedin.com/in/sarvesh-sawant-abb384239/",
       icon: "Linkedin",
     },
   ],
