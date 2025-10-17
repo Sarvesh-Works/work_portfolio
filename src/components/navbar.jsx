@@ -45,7 +45,7 @@ export function Navbar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
-        "bg-background/80 backdrop-blur-sm border-b shadow-sm"
+        "bg-background/100 backdrop-blur-lg border-b shadow-sm oklch(28.2% 0.091 267.935)"
       )}
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">

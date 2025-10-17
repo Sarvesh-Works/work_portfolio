@@ -142,41 +142,6 @@ export const skillsData = [
 
 export const projectsData = [
   {
-    title: "SALON_MANAGEMENT_APP",
-    description:
-      "Salon management and booking platform enabling customers to discover services, book appointments, select preferred stylists, and pay securely. Built with a focus on scalability, security, and smooth UX for both customers and staff.",
-    image: {
-      src: "/salon.png",
-      width: 800,
-      height: 600,
-    },
-    tags: [
-      "Flutter",
-      "Dart",
-      "Firebase (Auth, Firestore, Cloud Functions)",
-      "Stripe/Razorpay",
-      "MongoDB",
-      "RESTful APIs",
-    ],
-    link: "#",
-    status: "IN PROGRESS",
-    date: "January 2025 - Present",
-  },
-  {
-    title: "SOCIETY_MANAGEMENT_APP",
-    description:
-      "Society management application built with Flutter, Firebase, and Node.js. Features include managing aspects, designed with smooth UI/UX and real-time data handling for seamless user experience.",
-    image: {
-      src: "/society.png",
-      width: 800,
-      height: 600,
-    },
-    tags: ["Flutter", "Firebase", "Node.js", "MongoDB", "Real-time"],
-    link: "#",
-    status: "IN PROGRESS",
-    date: "May 2025 – Present",
-  },
-  {
     title: "E-COMMERCE CLOTHING ",
     description:
       "Designing a full-stack platform for a client's clothing business, featuring real-time shopping, secure payments, and shipping. Implement a responsive user interface to showcase collections and enable seamless customer transactions.",
@@ -202,19 +167,6 @@ export const projectsData = [
     link: "https://sanjeevani-services.vercel.app/",
     date: "2025",
   },
-  // {
-  //   title: "EXPENSE TRACKER",
-  //   description:
-  //     "Built an expense tracking app using Flutter and Dart, connected with Firebase for user authentication. Enabled categorization and visualization of expenses with real-time database synchronization.",
-  //   image: {
-  //     src: "/expense_tracker.png",
-  //     width: 800,
-  //     height: 600,
-  //   },
-  //   tags: ["Flutter", "Dart", "Firebase", "Real-time Database"],
-  //   link: "#",
-  //   date: "October 2024",
-  // },
 ];
 
 export const achievementsData = [
